@@ -1,7 +1,23 @@
-import "./App.scss";
+import {
+  About,
+  ContactMe,
+  Home,
+  Navbar,
+  Portfolio,
+  Skills,
+} from "./components";
 
 function App() {
-  return <h1>My Portfolio</h1>;
+  return (
+    <>
+      <Navbar></Navbar>
+      <Home></Home>
+      <About></About>
+      <Skills></Skills>
+      <Portfolio></Portfolio>
+      <ContactMe></ContactMe>
+    </>
+  );
 }
 
 export default App;
