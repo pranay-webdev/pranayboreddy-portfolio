@@ -1,18 +1,51 @@
-@import "./styles/variables";
+@import "./styles/colors";
+@import "./styles/fonts";
+@import "./styles/typography";
+@import "./styles/common";
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "poppins", sans-serif;
+  font-size: $normal-font-size;
+  background-color: $body-color;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $title-color;
+  font-weight: $font-semi-bold;
 }
 
 ul {
   list-style-type: none;
 }
 
-body {
-  margin: 0;
-  font-family: "poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 code {

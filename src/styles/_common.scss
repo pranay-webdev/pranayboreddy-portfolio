@@ -1,0 +1,25 @@
+@import "./typography";
+
+.container {
+  max-width: 768px;
+  margin: 0 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 2rem 0 4rem;
+  .title {
+    font-size: $h1-font-size;
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+    display: block;
+    font-size: $small-font-size;
+    margin-bottom: 3rem;
+  }
+}
