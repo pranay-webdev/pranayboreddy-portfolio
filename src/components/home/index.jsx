@@ -41,7 +41,10 @@ const Home = () => {
             </a>
           </div>
           <div className="image">
-            <img src={require("../../assets/images/pranay.png")} alt="blob" />
+            <img
+              src={require("../../assets/images/pranay-home.png")}
+              alt="blob"
+            />
           </div>
           <div className="data">
             <h1 className="title">Hi, I am Pranay</h1>

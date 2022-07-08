@@ -36,3 +36,17 @@
   display: inline-flex;
   align-items: center;
 }
+
+.section {
+  padding: 2rem 0 4rem;
+  & > .title {
+    font-size: $h1-font-size;
+    text-align: center;
+  }
+  & > .subtitle {
+    text-align: center;
+    display: block;
+    font-size: $small-font-size;
+    margin-bottom: 3rem;
+  }
+}
