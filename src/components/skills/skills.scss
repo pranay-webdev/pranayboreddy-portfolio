@@ -1,0 +1,90 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+
+.skills {
+  .skillsContainer {
+    row-gap: 0;
+  }
+  .content {
+    .skillsHeader {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      cursor: pointer;
+      .icon,
+      .arrow {
+        font-size: 2rem;
+        color: $primary-color;
+      }
+      .icon {
+        margin-right: 0.75rem;
+      }
+      .arrow {
+        margin-left: auto;
+        transition: 0.4s;
+      }
+      .title {
+        font-size: $h3-font-size;
+      }
+      .subtitle {
+        font-size: $small-font-size;
+        color: $text-color-light;
+      }
+    }
+    .list {
+      row-gap: 1.5rem;
+      padding-left: 2.7rem;
+      transition: 0.4s;
+      .data {
+        .title {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+          .name {
+            font-size: $normal-font-size;
+            font-weight: $font-medium;
+          }
+        }
+        .bar,
+        .percentage {
+          height: 5px;
+          border-radius: 0.25rem;
+        }
+        .bar {
+          background-color: $primary-color-lighter;
+          .percentage {
+            display: block;
+            background-color: $primary-color;
+            &.html {
+              width: 90%;
+            }
+            &.css {
+              width: 80%;
+            }
+            &.javascript {
+              width: 85%;
+            }
+            &.react {
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+    &.open {
+      .list {
+        height: max-content;
+        margin-bottom: 2.5rem;
+      }
+      .arrow {
+        transform: rotate(-180deg);
+      }
+    }
+    &.close {
+      .list {
+        height: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}
