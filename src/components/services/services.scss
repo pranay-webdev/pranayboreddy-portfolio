@@ -1,0 +1,40 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+
+.services {
+  .servicesContainer {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    .content {
+      position: relative;
+      background-color: $container-color;
+      padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      .serviceIcon {
+        display: block;
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+      }
+      .title {
+        font-size: $h3-font-size;
+        margin-bottom: 1rem;
+        font-weight: $font-medium;
+      }
+      .servicesButton {
+        cursor: pointer;
+        font-size: $small-font-size;
+        &:hover {
+          .icon {
+            transform: translateX(0.25rem);
+          }
+        }
+      }
+    }
+  }
+}

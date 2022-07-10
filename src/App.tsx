@@ -4,18 +4,20 @@ import {
   Home,
   Navbar,
   Portfolio,
+  Services,
   Skills,
 } from "./components";
 
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <Home></Home>
-      <About></About>
-      <Skills></Skills>
-      <Portfolio></Portfolio>
-      <ContactMe></ContactMe>
+      <Navbar />
+      <Home />
+      <About />
+      <Skills />
+      <Services />
+      <Portfolio />
+      <ContactMe />
     </>
   );
 }
