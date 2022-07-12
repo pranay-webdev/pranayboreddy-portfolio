@@ -7,6 +7,9 @@ import {
   Services,
   Skills,
 } from "./components";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
 function App() {
   return (

@@ -41,6 +41,14 @@
   padding: 0.75rem 1rem;
 }
 
+.button-white {
+  background-color: #fff;
+  color: $primary-color;
+  &:hover {
+    background-color: #fff;
+  }
+}
+
 .button-link {
   padding: 0;
   background-color: transparent;

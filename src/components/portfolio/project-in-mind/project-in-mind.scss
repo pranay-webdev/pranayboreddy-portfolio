@@ -1,0 +1,21 @@
+@import "../../../styles/colors";
+@import "../../../styles/typography";
+
+.project {
+  text-align: center;
+  .backgroundImgContainer {
+    background-color: $primary-color-second;
+    padding: 3rem;
+    .projectContainer {
+      .title {
+        font-size: $h2-font-size;
+        margin-bottom: 0.75rem;
+        color: #fff;
+      }
+      .description {
+        margin-bottom: 1.5rem;
+        color: #fff;
+      }
+    }
+  }
+}

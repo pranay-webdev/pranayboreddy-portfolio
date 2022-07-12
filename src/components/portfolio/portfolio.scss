@@ -1,0 +1,67 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+
+.portfolio {
+  .portfolioContainer {
+    overflow: initial;
+    .content {
+      padding: 0 1.5rem;
+      .banner {
+        width: 265px;
+        border-radius: 0.5rem;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $primary-color-second;
+        p {
+          font-size: $h1-font-size;
+          color: $primary-color;
+        }
+      }
+      .data {
+        .title {
+          font-size: $h3-font-size;
+          margin-bottom: 0.5rem;
+        }
+        .description {
+          margin-bottom: 0.75rem;
+        }
+        .portfolioButton {
+          &:hover {
+            .icon {
+              transform: translateX(0.25rem);
+            }
+          }
+        }
+      }
+    }
+    .swiper {
+      overflow: visible;
+      .swiper-button-prev,
+      .swiper-button-next {
+        &::after {
+          font-size: 1.5rem;
+          color: $primary-color;
+          z-index: 20;
+        }
+      }
+      .swiper-button-prev {
+        left: -1rem;
+      }
+      .swiper-button-next {
+        right: -0.5rem;
+      }
+      &.swiper-horizontal {
+        & > .swiper-pagination {
+          &.swiper-pagination-bullets {
+            margin-bottom: -2.5rem;
+            .swiper-pagination-bullet-active {
+              background-color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
