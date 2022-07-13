@@ -4,6 +4,7 @@
 .portfolio {
   .portfolioContainer {
     overflow: initial;
+    margin: 0;
     .content {
       padding: 0 1.5rem;
       .banner {
@@ -37,7 +38,7 @@
       }
     }
     .swiper {
-      overflow: visible;
+      padding: 0 2rem 2rem;
       .swiper-button-prev,
       .swiper-button-next {
         &::after {
@@ -47,15 +48,14 @@
         }
       }
       .swiper-button-prev {
-        left: -1rem;
+        left: 6px;
       }
       .swiper-button-next {
-        right: -0.5rem;
+        right: 6px;
       }
       &.swiper-horizontal {
         & > .swiper-pagination {
           &.swiper-pagination-bullets {
-            margin-bottom: -2.5rem;
             .swiper-pagination-bullet-active {
               background-color: $primary-color;
             }

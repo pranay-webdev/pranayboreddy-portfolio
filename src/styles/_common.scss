@@ -22,6 +22,8 @@
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: $font-medium;
+  outline: none;
+  border: none;
   &:hover {
     background-color: $primary-color-alt;
   }

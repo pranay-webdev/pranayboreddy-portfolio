@@ -53,7 +53,7 @@ const Home = () => {
               Enterprise application developer focusing on user and developer
               experience delivering quality work.
             </p>
-            <a href="#contact" className="common-button button-flex">
+            <a href="#contact_me" className="common-button button-flex">
               Contact Me <UilMessage className="icon" />
             </a>
           </div>

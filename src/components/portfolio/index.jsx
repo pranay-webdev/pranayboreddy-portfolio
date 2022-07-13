@@ -31,7 +31,8 @@ const Portfolio = () => {
                     validations
                   </p>
                   <a
-                    href="#"
+                    href="https://upbeat-hodgkin-483b20.netlify.app/"
+                    target="_blank"
                     className="common-button button-flex button-small portfolioButton button-icon"
                   >
                     Demo

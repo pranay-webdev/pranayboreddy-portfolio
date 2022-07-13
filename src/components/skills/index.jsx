@@ -3,7 +3,7 @@ import { UilBracketsCurly, UilAngleDown } from "@iconscout/react-unicons";
 import "./skills.scss";
 
 const Skills = () => {
-  const [isSkillsOpen, setIsSkillsOpen] = useState(false);
+  const [isSkillsOpen, setIsSkillsOpen] = useState(true);
   return (
     <section className="skills section" id="skills">
       <h2 className="title">Skills</h2>
