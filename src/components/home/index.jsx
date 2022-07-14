@@ -6,7 +6,7 @@ import {
   UilMouseAlt,
   UilArrowDown,
 } from "@iconscout/react-unicons";
-
+import { scrollToView } from "../../shared/utils";
 import "./home.scss";
 
 const Home = () => {
@@ -53,17 +53,23 @@ const Home = () => {
               Enterprise application developer focusing on user and developer
               experience delivering quality work.
             </p>
-            <a href="#contact_me" className="common-button button-flex">
+            <button
+              onClick={() => scrollToView("contact_me")}
+              className="common-button button-flex"
+            >
               Contact Me <UilMessage className="icon" />
-            </a>
+            </button>
           </div>
         </div>
         <div className="scrollButton">
-          <a href="#about" className="button button-flex">
+          <button
+            onClick={() => scrollToView("about")}
+            className="button button-flex"
+          >
             <UilMouseAlt size="2rem" />
             <span>Scroll Down</span>
             <UilArrowDown size="1.25rem" />
-          </a>
+          </button>
         </div>
       </div>
     </section>

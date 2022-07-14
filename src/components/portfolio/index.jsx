@@ -33,6 +33,7 @@ const Portfolio = () => {
                   <a
                     href="https://upbeat-hodgkin-483b20.netlify.app/"
                     target="_blank"
+                    rel="noreferrer"
                     className="common-button button-flex button-small portfolioButton button-icon"
                   >
                     Demo
@@ -51,13 +52,10 @@ const Portfolio = () => {
                   <p className="description">
                     Application that connects local guides with the travellers
                   </p>
-                  <a
-                    href="#"
-                    className="common-button button-flex button-small portfolioButton button-icon"
-                  >
+                  <button className="common-button button-flex button-small portfolioButton button-icon">
                     Demo
                     <UilArrowRight className="icon" />
-                  </a>
+                  </button>
                 </div>
               </div>
             </SwiperSlide>

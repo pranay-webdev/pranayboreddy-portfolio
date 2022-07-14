@@ -11,16 +11,13 @@ import {
 } from "@iconscout/react-unicons";
 import { useState, useEffect, useRef } from "react";
 import "./navbar.scss";
+import { scrollToView, scrollToTop } from "../../shared/utils";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [hightLightId, setHighlightId] = useState("home");
   const [isScrolled, setScrolled] = useState(false);
   const sectionref = useRef(null);
-
-  const scrollSectionHOC = () => {
-    setActiveLink(sectionref.current);
-  };
 
   const setActiveLink = (refs) => {
     const scrollY = window.pageYOffset;
@@ -43,6 +40,9 @@ const Navbar = () => {
 
   useEffect(() => {
     sectionref.current = document.querySelectorAll("section[id]");
+    const scrollSectionHOC = () => {
+      setActiveLink(sectionref.current);
+    };
     window.addEventListener("scroll", scrollSectionHOC);
     return () => {
       window.removeEventListener("scroll", scrollSectionHOC);
@@ -64,19 +64,19 @@ const Navbar = () => {
               className={`item ${hightLightId === "home" ? "activeLink" : ""}`}
               onClick={() => setShowMenu(false)}
             >
-              <a href="#home" className="link">
+              <button onClick={() => scrollToView("home")} className="link">
                 <UilEstate size="26" className="icon" />
                 Home
-              </a>
+              </button>
             </li>
             <li
               className={`item ${hightLightId === "about" ? "activeLink" : ""}`}
               onClick={() => setShowMenu(false)}
             >
-              <a href="#about" className="link">
+              <button onClick={() => scrollToView("about")} className="link">
                 <UilUser size="26" className="icon" />
                 About
-              </a>
+              </button>
             </li>
             <li
               className={`item ${
@@ -84,10 +84,10 @@ const Navbar = () => {
               }`}
               onClick={() => setShowMenu(false)}
             >
-              <a href="#skills" className="link">
+              <button onClick={() => scrollToView("skills")} className="link">
                 <UilFileAlt size="26" className="icon" />
                 Skills
-              </a>
+              </button>
             </li>
             <li
               className={`item ${
@@ -95,10 +95,10 @@ const Navbar = () => {
               }`}
               onClick={() => setShowMenu(false)}
             >
-              <a href="#services" className="link">
+              <button onClick={() => scrollToView("services")} className="link">
                 <UilBriefcaseAlt size="26" className="icon" />
                 Services
-              </a>
+              </button>
             </li>
             <li
               className={`item ${
@@ -106,10 +106,13 @@ const Navbar = () => {
               }`}
               onClick={() => setShowMenu(false)}
             >
-              <a href="#portfolio" className="link">
+              <button
+                onClick={() => scrollToView("portfolio")}
+                className="link"
+              >
                 <UilScenery size="26" className="icon" />
                 Portfolio
-              </a>
+              </button>
             </li>
             <li
               className={`item ${
@@ -117,10 +120,13 @@ const Navbar = () => {
               }`}
               onClick={() => setShowMenu(false)}
             >
-              <a href="#contact_me" className="link">
+              <button
+                onClick={() => scrollToView("contact_me")}
+                className="link"
+              >
                 <UilMessage size="26" className="icon" />
                 Contact me
-              </a>
+              </button>
             </li>
           </ul>
           <UilTimes className="close" onClick={() => setShowMenu(false)} />
@@ -131,13 +137,13 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <a
-        href="#"
+      <button
+        onClick={scrollToTop}
         className={`scrollup ${isScrolled ? "show" : ""}`}
         id="scroll-up"
       >
         <UilArrowUp size="1.6rem" className="icon" />
-      </a>
+      </button>
     </header>
   );
 };
