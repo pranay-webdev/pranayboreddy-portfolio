@@ -22,6 +22,12 @@
   display: flex;
 }
 
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
 .common-button {
   display: inline-block;
   background-color: $primary-color;
