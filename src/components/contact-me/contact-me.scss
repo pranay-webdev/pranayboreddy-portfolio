@@ -1,9 +1,13 @@
 @import "../../styles/colors";
 @import "../../styles/typography";
+@import "../../styles/resolutions";
 
 .contact {
   .contactContainer {
     row-gap: 3rem;
+    @include my-screen("tablets") {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .contactInfo {
       display: flex;
       margin-bottom: 2rem;
@@ -23,6 +27,9 @@
       }
     }
     .contactForm {
+      @include my-screen("laptops") {
+        width: 440px;
+      }
       .fields {
         .field {
           background-color: $input-color;
@@ -48,7 +55,6 @@
   }
 }
 .copyrightSection {
-  padding-bottom: 4rem;
   font-size: $smaller-font-size;
   text-align: end;
 }

@@ -1,9 +1,16 @@
 @import "./typography";
 @import "./_colors.scss";
+@import "./resolutions";
 
 .container {
   max-width: 768px;
   margin: 0 1.5rem;
+  @include my-screen("tablets") {
+    margin: 0 auto;
+  }
+  @include my-screen("laptops") {
+    max-width: 900px;
+  }
 }
 
 .grid {
@@ -63,6 +70,12 @@
 
 .section {
   padding: 2rem 0 4rem;
+  @include my-screen("tablets") {
+    padding: 6rem 2rem 2rem;
+  }
+  @include my-screen("laptops") {
+    padding: 7rem 0rem 3rem;
+  }
   & > .title {
     font-size: $h1-font-size;
     text-align: center;
@@ -72,5 +85,8 @@
     display: block;
     font-size: $small-font-size;
     margin-bottom: 3rem;
+    @include my-screen("tablets") {
+      margin-bottom: 4rem;
+    }
   }
 }

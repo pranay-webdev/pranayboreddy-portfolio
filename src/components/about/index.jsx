@@ -30,6 +30,12 @@ const About = () => {
                 Completed <br /> Projects
               </span>
             </div>
+            <div>
+              <span className="title">2</span>
+              <span className="name">
+                Companies <br /> Worked
+              </span>
+            </div>
           </div>
           <div className="buttonsContainer">
             <a

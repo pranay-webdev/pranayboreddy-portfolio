@@ -14,15 +14,7 @@ const Services = () => {
   const toggleModal = (service) => {
     setOpenModal(!openModal);
     setModalHeadline(
-      service === "fontend dev" ? (
-        <>
-          UI <br /> Developer
-        </>
-      ) : (
-        <>
-          Educator <br /> Mentor
-        </>
-      )
+      service === "fontend dev" ? "UI Developer" : "Educator Mentor"
     );
   };
 

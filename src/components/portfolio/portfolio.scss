@@ -1,12 +1,20 @@
 @import "../../styles/colors";
 @import "../../styles/typography";
+@import "../../styles/resolutions";
 
 .portfolio {
   .portfolioContainer {
     overflow: initial;
-    margin: 0;
+    margin: 0 auto;
     .content {
       padding: 0 1.5rem;
+      @include my-screen("tablets") {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include my-screen("laptops") {
+        gap: 5rem;
+      }
+
       .banner {
         width: 265px;
         border-radius: 0.5rem;
@@ -15,12 +23,19 @@
         align-items: center;
         justify-content: center;
         border: 1px solid $primary-color-second;
+        @include my-screen("tablets") {
+          width: 300px;
+          height: 200px;
+        }
         p {
           font-size: $h1-font-size;
           color: $primary-color;
         }
       }
       .data {
+        @include my-screen("tablets") {
+          margin: auto 0;
+        }
         .title {
           font-size: $h3-font-size;
           margin-bottom: 0.5rem;
@@ -45,17 +60,33 @@
           font-size: 1.5rem;
           color: $primary-color;
           z-index: 20;
+          @include my-screen("tablets") {
+            font-size: 2rem;
+          }
+          @include my-screen("laptops") {
+            font-size: 2.5rem;
+          }
         }
       }
       .swiper-button-prev {
         left: 6px;
+        @include my-screen("laptops") {
+          left: 0;
+        }
       }
       .swiper-button-next {
         right: 6px;
+        @include my-screen("laptops") {
+          right: 0;
+        }
       }
       &.swiper-horizontal {
         & > .swiper-pagination {
           &.swiper-pagination-bullets {
+            bottom: 0;
+            @include my-screen("tablets") {
+              bottom: -6px;
+            }
             .swiper-pagination-bullet-active {
               background-color: $primary-color;
             }

@@ -77,10 +77,12 @@ const ContactMe = () => {
           </form>
         </div>
       </section>
-      <div className="copyrightSection container">
-        <p className="copyright">&copy;2022 Pranay</p>
-        <span className="copyrightKeyword">ALL RIGHTS RESERVED</span>
-      </div>
+      <section className="section copyright">
+        <div className="copyrightSection container">
+          <p className="name">&copy;2022 Pranay</p>
+          <span className="keyword">ALL RIGHTS RESERVED</span>
+        </div>
+      </section>
     </>
   );
 };

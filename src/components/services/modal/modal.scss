@@ -1,5 +1,6 @@
 @import "../../../styles/colors";
 @import "../../../styles/typography";
+@import "../../../styles/resolutions";
 
 .modal {
   position: fixed;
@@ -25,10 +26,13 @@
     background-color: $container-color;
     padding: 1.5rem;
     border-radius: 0.5rem;
+    @include my-screen("tablets") {
+      width: 450px;
+    }
     .title {
       font-size: $h3-font-size;
       font-weight: $font-medium;
-      mix-blend-mode: 1.5rem;
+      margin-bottom: 1rem;
     }
     .modalClose {
       position: absolute;

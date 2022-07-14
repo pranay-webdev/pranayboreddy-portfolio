@@ -1,11 +1,18 @@
 @import "../../styles/colors";
 @import "../../styles/typography";
+@import "../../styles/resolutions";
 
 .skills {
   .skillsContainer {
     row-gap: 0;
+    @include my-screen("tablets") {
+      place-items: center;
+    }
   }
   .content {
+    @include my-screen("tablets") {
+      width: 25rem;
+    }
     .skillsHeader {
       display: flex;
       align-items: center;

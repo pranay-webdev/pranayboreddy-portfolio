@@ -1,10 +1,15 @@
 @import "../../styles/colors";
 @import "../../styles/typography";
+@import "../../styles/resolutions";
 
 .services {
   .servicesContainer {
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
+    @include my-screen("tablets") {
+      grid-template-columns: repeat(2, 230px);
+      justify-content: center;
+    }
     .content {
       position: relative;
       background-color: $container-color;
@@ -15,11 +20,18 @@
       &:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
+      @include my-screen("tablets") {
+        padding: 6rem 0 2rem 2.5rem;
+      }
       .serviceIcon {
         display: block;
         font-size: 1.5rem;
         color: $primary-color;
         margin-bottom: 1rem;
+        @include my-screen("tablets") {
+          height: 2rem;
+          width: 2rem;
+        }
       }
       .title {
         font-size: $h3-font-size;

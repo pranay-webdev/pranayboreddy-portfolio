@@ -1,12 +1,25 @@
 @import "../../../styles/colors";
 @import "../../../styles/typography";
+@import "../../../styles/resolutions";
 
 .project {
   text-align: center;
   .backgroundImgContainer {
     background-color: $primary-color-second;
-    padding: 3rem;
+    padding: 3rem 0;
+    @include my-screen("tablets") {
+      grid-template-columns: repeat(2, 1fr);
+      background: none;
+      padding: 0;
+    }
     .projectContainer {
+      @include my-screen("tablets") {
+        background-color: $primary-color;
+        border-radius: 1rem;
+        padding: 3rem 2.5rem;
+        grid-template-columns: 1fr max-content;
+        column-gap: 3rem;
+      }
       .title {
         font-size: $h2-font-size;
         margin-bottom: 0.75rem;
