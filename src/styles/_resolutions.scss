@@ -1,0 +1,24 @@
+$screen-sm: 568px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xlg: 1200px;
+
+@mixin my-screen($media) {
+  @if $media == wide-mobiles {
+    @media only screen and (min-width: $screen-sm) {
+      @content;
+    }
+  } @else if $media == tablets {
+    @media only screen and (min-width: $screen-md) {
+      @content;
+    }
+  } @else if $media == laptops {
+    @media only screen and (min-width: $screen-lg) {
+      @content;
+    }
+  } @else if $media == desktops {
+    @media only screen and (min-width: $screen-xlg) {
+      @content;
+    }
+  }
+}

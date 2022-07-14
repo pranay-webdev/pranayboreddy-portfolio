@@ -1,0 +1,98 @@
+@import "./typography";
+@import "./_colors.scss";
+@import "./resolutions";
+
+.container {
+  max-width: 768px;
+  margin: 0 1.5rem;
+  @include my-screen("tablets") {
+    margin: 0 auto;
+  }
+  @include my-screen("laptops") {
+    max-width: 900px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.common-button {
+  display: inline-block;
+  background-color: $primary-color;
+  color: $color-white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: $font-medium;
+  outline: none;
+  border: none;
+  &:hover {
+    background-color: $primary-color-alt;
+  }
+  .icon {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+    transition: 0.3s;
+  }
+}
+
+.button-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button-small {
+  padding: 0.75rem 1rem;
+}
+
+.button-white {
+  background-color: #fff;
+  color: $primary-color;
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.button-link {
+  padding: 0;
+  background-color: transparent;
+  color: $primary-color;
+  &:hover {
+    background-color: transparent;
+    color: $primary-color-alt;
+  }
+}
+
+.section {
+  padding: 2rem 0 4rem;
+  @include my-screen("tablets") {
+    padding: 6rem 2rem 2rem;
+  }
+  @include my-screen("laptops") {
+    padding: 7rem 0rem 3rem;
+  }
+  & > .title {
+    font-size: $h1-font-size;
+    text-align: center;
+  }
+  & > .subtitle {
+    text-align: center;
+    display: block;
+    font-size: $small-font-size;
+    margin-bottom: 3rem;
+    @include my-screen("tablets") {
+      margin-bottom: 4rem;
+    }
+  }
+}

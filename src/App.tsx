@@ -1,7 +1,28 @@
-import "./App.scss";
+import {
+  About,
+  ContactMe,
+  Home,
+  Navbar,
+  Portfolio,
+  Services,
+  Skills,
+} from "./components";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
 function App() {
-  return <h1>My Portfolio</h1>;
+  return (
+    <>
+      <Navbar />
+      <Home />
+      <About />
+      <Skills />
+      <Services />
+      <Portfolio />
+      <ContactMe />
+    </>
+  );
 }
 
 export default App;

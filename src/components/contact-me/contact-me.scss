@@ -1,0 +1,60 @@
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/resolutions";
+
+.contact {
+  .contactContainer {
+    row-gap: 3rem;
+    @include my-screen("tablets") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .contactInfo {
+      display: flex;
+      margin-bottom: 2rem;
+      align-items: center;
+      .icon {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-right: 0.75rem;
+      }
+      .title {
+        font-size: $h3-font-size;
+        font-weight: $font-medium;
+      }
+      .subtitle {
+        font-size: $small-font-size;
+        color: $text-color-light;
+      }
+    }
+    .contactForm {
+      @include my-screen("laptops") {
+        width: 440px;
+      }
+      .fields {
+        .field {
+          background-color: $input-color;
+          border-radius: 0.5rem;
+          padding: 0.75rem 1rem;
+          .label {
+            font-size: $smaller-font-size;
+            color: $title-color;
+          }
+          .input {
+            width: 100%;
+            background-color: $input-color;
+            color: $text-color;
+            font-family: $body-font;
+            font-size: $normal-font-size;
+            border: none;
+            outline: none;
+            padding: 0.25rem 0.5rem 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+.copyrightSection {
+  font-size: $smaller-font-size;
+  text-align: end;
+}

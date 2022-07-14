@@ -1,0 +1,62 @@
+@import "../../styles/typography";
+@import "../../styles/colors";
+@import "../../styles/resolutions";
+
+.about {
+  .aboutContainer {
+    @include my-screen("tablets") {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 5rem;
+    }
+    .image {
+      width: 200px;
+      border-radius: 0.5rem;
+      justify-self: center;
+      align-self: center;
+      @include my-screen("tablets") {
+        justify-self: start;
+        width: 280px;
+      }
+    }
+    .data {
+      @include my-screen("tablets") {
+        margin: auto 0;
+      }
+      .description {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        @include my-screen("tablets") {
+          text-align: initial;
+        }
+      }
+      .info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2.5rem;
+        @include my-screen("tablets") {
+          justify-content: space-between;
+        }
+        .title {
+          font-size: $h2-font-size;
+          font-weight: $font-semi-bold;
+          color: $title-color;
+        }
+        .name {
+          font-size: $smaller-font-size;
+        }
+        .title,
+        .name {
+          display: block;
+          text-align: center;
+        }
+      }
+      .buttonsContainer {
+        display: flex;
+        justify-content: center;
+        @include my-screen("tablets") {
+          justify-content: start;
+        }
+      }
+    }
+  }
+}
