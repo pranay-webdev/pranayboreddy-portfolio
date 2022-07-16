@@ -22,14 +22,18 @@ const ContactMe = () => {
               <UilPhone className="icon" size="2rem" />
               <div>
                 <h3 className="title">Call me</h3>
-                <span className="subtitle">+91-9966229322</span>
+                <a href="tel:+919966229322" className="subtitle">
+                  +91-9966229322
+                </a>
               </div>
             </div>
             <div className="contactInfo">
               <UilEnvelope className="icon" size="2rem" />
               <div>
                 <h3 className="title">Email</h3>
-                <span className="subtitle">pranayboreddy@gmail.com</span>
+                <a href="mailto:pranayboreddy@gmail.com" className="subtitle">
+                  pranayboreddy@gmail.com
+                </a>
               </div>
             </div>
             <div className="contactInfo">
@@ -43,7 +47,7 @@ const ContactMe = () => {
             </div>
           </div>
           <form onSubmit={sendMessage} className="contactForm grid">
-            <div className="fields grid">
+            <div className="fieldGroup grid">
               <div className="field">
                 <label htmlFor="name" className="label">
                   Name
@@ -56,23 +60,23 @@ const ContactMe = () => {
                 </label>
                 <input type="text" id="email" className="input" />
               </div>
-              <div className="field">
-                <label htmlFor="project" className="label">
-                  Project
-                </label>
-                <input type="text" id="project" className="input" />
-              </div>
-              <div className="field">
-                <label htmlFor="message" className="label">
-                  Message
-                </label>
-                <textarea name="message" id="message" className="input" />
-              </div>
-              <div>
-                <button type="submit" className="common-button button-flex">
-                  Send Message <UilMessage className="icon" />
-                </button>
-              </div>
+            </div>
+            <div className="field">
+              <label htmlFor="project" className="label">
+                Project
+              </label>
+              <input type="text" id="project" className="input" />
+            </div>
+            <div className="field">
+              <label htmlFor="message" className="label">
+                Message
+              </label>
+              <textarea name="message" id="message" className="input" />
+            </div>
+            <div>
+              <button type="submit" className="common-button button-flex">
+                Send Message <UilMessage className="icon" />
+              </button>
             </div>
           </form>
         </div>

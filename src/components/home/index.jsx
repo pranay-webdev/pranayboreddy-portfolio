@@ -16,7 +16,7 @@ const Home = () => {
         <div className="content grid">
           <div className="social">
             <a
-              href="https://twitter.com/pranayboreddy"
+              href="https://linkedin.com/in/pranay-boreddy/"
               target="_blank"
               rel="noreferrer"
               className="icon"
@@ -24,7 +24,7 @@ const Home = () => {
               <UilLinkedinAlt />
             </a>
             <a
-              href="https://linkedin.com/in/pranay-boreddy/"
+              href="https://twitter.com/pranayboreddy"
               target="_blank"
               rel="noreferrer"
               className="icon"
@@ -42,7 +42,7 @@ const Home = () => {
           </div>
           <div className="image">
             <img
-              src={require("../../assets/images/pranay-home.png")}
+              src={require("../../assets/images/pranay-home.webp")}
               alt="blob"
             />
           </div>

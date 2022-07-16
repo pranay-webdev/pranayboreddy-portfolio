@@ -9,7 +9,7 @@ const About = () => {
       <div className="aboutContainer container grid">
         <img
           className="image"
-          src={require("../../assets/images/pranay-about.jpg")}
+          src={require("../../assets/images/pranay-about.webp")}
           alt="about"
         />
         <div className="data">
@@ -39,7 +39,7 @@ const About = () => {
           </div>
           <div className="buttonsContainer">
             <a
-              download=""
+              download
               href="../../assets/pdfs/pranay-resume.pdf"
               className="common-button button-flex"
             >
