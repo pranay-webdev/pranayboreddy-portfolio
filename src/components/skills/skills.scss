@@ -4,15 +4,12 @@
 
 .skills {
   .skillsContainer {
-    row-gap: 0;
+    gap: 2.5rem;
     @include my-screen("tablets") {
-      place-items: center;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   .content {
-    @include my-screen("tablets") {
-      width: 25rem;
-    }
     .skillsHeader {
       display: flex;
       align-items: center;
@@ -40,7 +37,7 @@
     .list {
       row-gap: 1.5rem;
       padding: 1rem 0 0 2.7rem;
-      transition: 0.4s;
+      transition: 0.3s;
       .data {
         .title {
           display: flex;
@@ -70,8 +67,23 @@
             &.javascript {
               width: 85%;
             }
-            &.react {
+            &.reactjs {
               width: 90%;
+            }
+            &.angular {
+              width: 75%;
+            }
+            &.vuejs {
+              width: 60%;
+            }
+            &.datastructures {
+              width: 85%;
+            }
+            &.algorihms {
+              width: 50%;
+            }
+            &.git {
+              width: 75%;
             }
           }
         }
@@ -79,8 +91,11 @@
     }
     &.open {
       .list {
-        height: max-content;
-        // margin-bottom: 2.5rem;
+        max-height: 100vh;
+        margin-bottom: 2.5rem;
+        @include my-screen("tablets") {
+          margin-bottom: 0;
+        }
       }
       .arrow {
         transform: rotate(-180deg);
@@ -88,8 +103,9 @@
     }
     &.close {
       .list {
-        height: 0;
+        max-height: 0;
         overflow: hidden;
+        padding-top: 0;
       }
     }
   }

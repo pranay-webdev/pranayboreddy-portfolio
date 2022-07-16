@@ -28,27 +28,28 @@
     }
     .contactForm {
       @include my-screen("laptops") {
-        width: 440px;
+        width: 540px;
+        .fieldGroup {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
-      .fields {
-        .field {
+      .field {
+        background-color: $input-color;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        .label {
+          font-size: $smaller-font-size;
+          color: $title-color;
+        }
+        .input {
+          width: 100%;
           background-color: $input-color;
-          border-radius: 0.5rem;
-          padding: 0.75rem 1rem;
-          .label {
-            font-size: $smaller-font-size;
-            color: $title-color;
-          }
-          .input {
-            width: 100%;
-            background-color: $input-color;
-            color: $text-color;
-            font-family: $body-font;
-            font-size: $normal-font-size;
-            border: none;
-            outline: none;
-            padding: 0.25rem 0.5rem 0.5rem 0;
-          }
+          color: $text-color;
+          font-family: $body-font;
+          font-size: $normal-font-size;
+          border: none;
+          outline: none;
+          padding: 0.25rem 0.5rem 0.5rem 0;
         }
       }
     }
