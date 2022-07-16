@@ -37,14 +37,17 @@
     background: $primary-color;
     border-radius: 50%;
     overflow: hidden;
+    height: 210px;
     @include my-screen("tablets") {
       order: 1;
       justify-self: center;
       width: 240px;
+      height: 250px;
     }
     @include my-screen("laptops") {
       width: 260px;
       margin-left: 5rem;
+      height: 270px;
     }
     img {
       width: 100%;

@@ -141,6 +141,7 @@ const Navbar = () => {
         onClick={scrollToTop}
         className={`scrollup ${isScrolled ? "show" : ""}`}
         id="scroll-up"
+        aria-label="Scroll to the top of the page"
       >
         <UilArrowUp size="1.6rem" className="icon" />
       </button>

@@ -8,6 +8,7 @@ import {
 } from "@iconscout/react-unicons";
 import { scrollToView } from "../../shared/utils";
 import "./home.scss";
+import profileImg from "../../assets/images/pranay-home.webp";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <div className="content grid">
           <div className="social">
             <a
+              aria-label="Navigate to linkedin account"
               href="https://linkedin.com/in/pranay-boreddy/"
               target="_blank"
               rel="noreferrer"
@@ -24,6 +26,7 @@ const Home = () => {
               <UilLinkedinAlt />
             </a>
             <a
+              aria-label="navigate to Twitter account"
               href="https://twitter.com/pranayboreddy"
               target="_blank"
               rel="noreferrer"
@@ -32,6 +35,7 @@ const Home = () => {
               <UilTwitterAlt />
             </a>
             <a
+              aria-label="Navigate to GitHub account"
               href="https://github.com/pranayboreddy"
               target="_blank"
               rel="noreferrer"
@@ -41,14 +45,11 @@ const Home = () => {
             </a>
           </div>
           <div className="image">
-            <img
-              src={require("../../assets/images/pranay-home.webp")}
-              alt="blob"
-            />
+            <img src={profileImg} alt="Profile" />
           </div>
           <div className="data">
             <h1 className="title">Hi, I am Pranay</h1>
-            <h3 className="subtitle">Frontend Developer</h3>
+            <h2 className="subtitle">Frontend Developer</h2>
             <p className="description">
               Enterprise application developer focusing on user and developer
               experience delivering quality work.
