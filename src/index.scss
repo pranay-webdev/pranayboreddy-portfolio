@@ -3,6 +3,20 @@
 @import "./styles/typography";
 @import "./styles/common";
 
+:root {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+  --theme: "light";
+}
+
+.dark-mode {
+  @each $name, $color in $colors-dark {
+    --#{$name}: #{$color};
+  }
+  --theme: "dark";
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -17,8 +31,8 @@ body {
   margin: 0;
   font-family: "poppins", sans-serif;
   font-size: $normal-font-size;
-  background-color: $body-color;
-  color: $text-color;
+  background-color: getColor(body-color);
+  color: getColor(text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -27,7 +41,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: $title-color;
+  color: getColor(title-color);
   font-weight: $font-semi-bold;
 }
 

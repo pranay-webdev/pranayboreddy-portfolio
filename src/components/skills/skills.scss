@@ -17,7 +17,7 @@
       .icon,
       .arrow {
         font-size: 2rem;
-        color: $primary-color;
+        color: getColor(primary-color);
       }
       .icon {
         margin-right: 0.75rem;
@@ -31,7 +31,6 @@
       }
       .subtitle {
         font-size: $small-font-size;
-        color: $text-color-light;
       }
     }
     .list {
@@ -54,10 +53,10 @@
           border-radius: 0.25rem;
         }
         .bar {
-          background-color: $primary-color-lighter;
+          background-color: getColor(primary-color-lighter);
           .percentage {
             display: block;
-            background-color: $primary-color;
+            background-color: getColor(primary-color);
             &.html {
               width: 90%;
             }

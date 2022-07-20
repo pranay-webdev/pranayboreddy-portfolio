@@ -34,8 +34,7 @@ const Skills = () => {
                   return (
                     <div className="data" key={skill.id}>
                       <div className="title">
-                        ``
-                        <h3 className="name">{skill.name}</h3>
+                        <p className="name">{skill.name}</p>
                         <span className="number">{skill.percentage}%</span>
                       </div>
                       <div className="bar">

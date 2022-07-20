@@ -1,4 +1,5 @@
 import { UilDownloadAlt } from "@iconscout/react-unicons";
+import resume from "../../assets/pdfs/pranay-resume.pdf";
 import "./about.scss";
 
 const About = () => {
@@ -39,8 +40,8 @@ const About = () => {
           </div>
           <div className="buttonsContainer">
             <a
-              download
-              href="../../assets/pdfs/pranay-resume.pdf"
+              download="pranay-frontend-resume"
+              href={resume}
               className="common-button button-flex"
             >
               Download Resume <UilDownloadAlt className="icon" />
