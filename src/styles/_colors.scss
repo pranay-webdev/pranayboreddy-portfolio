@@ -1,13 +1,32 @@
-$base-color: 250; /* Purple 250 - Green 142 - Blue 230 */
-$primary-color: hsl($base-color, 69%, 61%);
-$primary-color-second: hsl($base-color, 69%, 61%);
-$primary-color-alt: hsl($base-color, 57%, 53%);
-$primary-color-lighter: hsl($base-color, 92%, 85%);
-$title-color: hsl($base-color, 8%, 15%);
-$text-color: hsl($base-color, 8%, 45%);
-$text-color-light: hsl($base-color, 8%, 65%);
-$input-color: hsl($base-color, 70%, 96%);
-$body-color: hsl($base-color, 60%, 99%);
-$container-color: #fff;
+/* Purple 250 - Green 142 - Blue 230 */
+$base-color: 230;
+$colors: (
+  primary-color: hsl($base-color, 69%, 61%),
+  primary-color-second: hsl($base-color, 69%, 61%),
+  primary-color-alt: hsl($base-color, 57%, 53%),
+  primary-color-lighter: hsl($base-color, 92%, 85%),
+  title-color: hsl($base-color, 8%, 15%),
+  text-color: hsl($base-color, 8%, 45%),
+  text-color-light: hsl($base-color, 8%, 65%),
+  input-color: hsl($base-color, 70%, 96%),
+  body-color: hsl($base-color, 60%, 99%),
+  shadow-color: hsla(0, 0%, 0%, 0.15),
+  container-color: #fff,
+  color-white: #fff,
+);
+
+$colors-dark: (
+  primary-color-second: hsl($base-color, 30%, 8%),
+  title-color: hsl($base-color, 8%, 95%),
+  text-color: hsl($base-color, 8%, 75%),
+  input-color: hsl($base-color, 29%, 16%),
+  body-color: hsl($base-color, 28%, 12%),
+  container-color: hsl($base-color, 29%, 16%),
+  shadow-color: hsla(0, 0%, 100%, 0.15),
+);
+
+@function getColor($color-name) {
+  @return var(--#{$color-name});
+}
 
 $color-white: #fff;

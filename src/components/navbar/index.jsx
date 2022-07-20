@@ -8,6 +8,8 @@ import {
   UilTimes,
   UilApps,
   UilArrowUp,
+  UilMoon,
+  UilSun,
 } from "@iconscout/react-unicons";
 import { useState, useEffect, useRef } from "react";
 import "./navbar.scss";
@@ -17,7 +19,10 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [hightLightId, setHighlightId] = useState("home");
   const [isScrolled, setScrolled] = useState(false);
+  const [darkModeState, setDarkModeState] = useState(true);
+
   const sectionref = useRef(null);
+  const colorSchemeRef = useRef(null);
 
   const setActiveLink = (refs) => {
     const scrollY = window.pageYOffset;
@@ -38,14 +43,35 @@ const Navbar = () => {
     }
   };
 
+  const toggleDarkMode = (state) => {
+    document.documentElement.classList.toggle("dark-mode", state);
+  };
+
   useEffect(() => {
+    toggleDarkMode(darkModeState);
+  }, [darkModeState]);
+
+  useEffect(() => {
+    // Active Link Highlight
     sectionref.current = document.querySelectorAll("section[id]");
     const scrollSectionHOC = () => {
       setActiveLink(sectionref.current);
     };
     window.addEventListener("scroll", scrollSectionHOC);
+
+    // Dark Mode Config
+    colorSchemeRef.current = window.matchMedia("(prefers-color-scheme: dark)");
+    setDarkModeState(colorSchemeRef.current.matches);
+
+    colorSchemeRef.current.addEventListener("change", (evt) =>
+      setDarkModeState(evt.matches)
+    );
+
     return () => {
       window.removeEventListener("scroll", scrollSectionHOC);
+      colorSchemeRef.current.removeEventListener("change", (evt) =>
+        toggleDarkMode(evt.matches)
+      );
     };
   }, []);
 
@@ -132,6 +158,12 @@ const Navbar = () => {
           <UilTimes className="close" onClick={() => setShowMenu(false)} />
         </div>
         <div className="btnGroup">
+          <div
+            className="changeTheme"
+            onClick={() => setDarkModeState(!darkModeState)}
+          >
+            {darkModeState ? <UilSun /> : <UilMoon />}
+          </div>
           <div className="toggleBtn" onClick={() => setShowMenu(true)}>
             <UilApps className="appIcon" />
           </div>

@@ -8,7 +8,7 @@
   bottom: 0;
   left: 0;
   z-index: 100;
-  background-color: $body-color;
+  background-color: getColor(body-color);
   @include my-screen("tablets") {
     top: 0;
     bottom: initial;
@@ -19,7 +19,7 @@
   }
 
   &.scrollHeader {
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -1px 4px getColor(shadow-color);
   }
 
   .nav {
@@ -32,12 +32,27 @@
       height: 3.5rem;
       column-gap: 1rem;
     }
+    .btnGroup {
+      display: flex;
+      align-items: center;
+      .changeTheme {
+        font-size: 1.25rem;
+        color: getColor(title-color);
+        margin-right: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        &:hover {
+          color: getColor(primary-color);
+        }
+      }
+    }
     .logo,
     .toggleBtn {
-      color: $title-color;
+      color: getColor(title-color);
       font-weight: $font-medium;
       &:hover {
-        color: $primary-color;
+        color: getColor(primary-color);
       }
       .appIcon {
         display: block;
@@ -68,8 +83,8 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-color: $body-color;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        background-color: getColor(body-color);
+        box-shadow: 0 -1px 4px getColor(shadow-color);
         border-radius: 4rem 4rem 0 0;
         &.showMenu {
           padding: 2rem 1.5rem 4rem;
@@ -95,8 +110,9 @@
           font-size: $small-font-size;
           font-weight: $font-medium;
           width: 100%;
+          color: getColor(title-color);
           &:hover {
-            color: $primary-color;
+            color: getColor(primary-color);
           }
           @include my-screen("tablets") {
             font-size: $normal-font-size;
@@ -109,7 +125,7 @@
         }
         & .activeLink {
           .link {
-            color: $primary-color;
+            color: getColor(primary-color);
           }
         }
       }
@@ -119,9 +135,9 @@
         bottom: 0.5rem;
         font-size: 1.5rem;
         cursor: pointer;
-        color: $primary-color;
+        color: getColor(primary-color);
         &:hover {
-          color: $primary-color-alt;
+          color: getColor(primary-color-alt);
         }
         @include my-screen("tablets") {
           display: none;
@@ -134,7 +150,7 @@
     right: 1rem;
     opacity: 0;
     bottom: 3rem;
-    background-color: $primary-color;
+    background-color: getColor(primary-color);
     padding: 0.3rem;
     border-radius: 0.4rem;
     z-index: 99;
@@ -142,14 +158,14 @@
     display: flex;
     align-items: center;
     &:hover {
-      background-color: $primary-color-alt;
+      background-color: getColor(primary-color-alt);
     }
     &.show {
       bottom: 5rem;
       opacity: 0.8;
     }
     .icon {
-      color: #fff;
+      color: $color-white;
     }
   }
 }

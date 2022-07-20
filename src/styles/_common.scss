@@ -31,7 +31,7 @@ button {
 
 .common-button {
   display: inline-block;
-  background-color: $primary-color;
+  background-color: getColor(primary-color);
   color: $color-white;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -39,7 +39,7 @@ button {
   outline: none;
   border: none;
   &:hover {
-    background-color: $primary-color-alt;
+    background-color: getColor(primary-color-alt);
   }
   .icon {
     font-size: 1.25rem;
@@ -58,20 +58,21 @@ button {
 }
 
 .button-white {
-  background-color: #fff;
-  color: $primary-color;
+  background-color: getColor(color-white);
+  color: getColor(primary-color);
+  border: 1px solid $color-white;
   &:hover {
-    background-color: #fff;
+    background-color: $color-white;
   }
 }
 
 .button-link {
   padding: 0;
   background-color: transparent;
-  color: $primary-color;
+  color: getColor(primary-color);
   &:hover {
     background-color: transparent;
-    color: $primary-color-alt;
+    color: getColor(primary-color-alt);
   }
 }
 

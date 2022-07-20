@@ -25,16 +25,16 @@
     row-gap: 1rem;
     .icon {
       font-size: 1.25rem;
-      color: $primary-color;
+      color: getColor(primary-color);
       &:hover {
-        color: $primary-color-alt;
+        color: getColor(primary-color-alt);
       }
     }
   }
   .image {
     border-radius: 50%;
     width: 200px;
-    background: $primary-color;
+    background: getColor(primary-color);
     border-radius: 50%;
     overflow: hidden;
     height: 210px;
@@ -65,7 +65,7 @@
     }
     .subtitle {
       font-size: $h3-font-size;
-      color: $text-color;
+      color: getColor(text-color);
       font-weight: $font-medium;
       margin-bottom: 0.75rem;
     }
@@ -76,14 +76,14 @@
   .scrollButton {
     display: none;
     .button {
-      color: $primary-color;
+      color: getColor(primary-color);
       transition: 0.3s;
       &:hover {
         transform: translateY(0.25rem);
       }
       span {
         font-size: $small-font-size;
-        color: $title-color;
+        color: getColor(title-color);
         font-weight: $font-medium;
         margin-right: 0.25rem;
       }

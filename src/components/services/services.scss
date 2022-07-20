@@ -12,13 +12,13 @@
     }
     .content {
       position: relative;
-      background-color: $container-color;
+      background-color: getColor(container-color);
       padding: 3.5rem 0.5rem 1.25rem 1.5rem;
       border-radius: 0.25rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 4px getColor(shadow-color);
       transition: 0.3s;
       &:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 8px getColor(shadow-color);
       }
       @include my-screen("tablets") {
         padding: 6rem 0 2rem 2.5rem;
@@ -26,7 +26,7 @@
       .serviceIcon {
         display: block;
         font-size: 1.5rem;
-        color: $primary-color;
+        color: getColor(primary-color);
         margin-bottom: 1rem;
         @include my-screen("tablets") {
           height: 2rem;
