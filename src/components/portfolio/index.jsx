@@ -3,6 +3,7 @@ import { Navigation, Pagination } from "swiper";
 import "./portfolio.scss";
 import ProjectInMind from "./project-in-mind";
 import Icon from "../icon";
+import Link from "next/link";
 
 const Portfolio = () => {
   return (
@@ -30,7 +31,7 @@ const Portfolio = () => {
                     components and animated interactions including form
                     validations
                   </p>
-                  <a
+                  <Link
                     href="https://trans-port.netlify.app"
                     target="_blank"
                     rel="noreferrer"
@@ -38,7 +39,7 @@ const Portfolio = () => {
                   >
                     Demo
                     <Icon icon="arrow-up" className="icon" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>

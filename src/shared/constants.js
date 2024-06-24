@@ -79,13 +79,13 @@ export const NAV_ITEMS = [
     name: "Services",
     iconName: "brief",
   },
+  // {
+  //   id: "portfolio",
+  //   name: "Portfolio",
+  //   iconName: "image",
+  // },
   {
-    id: "portfolio",
-    name: "Portfolio",
-    iconName: "image",
-  },
-  {
-    id: "contact",
+    id: "contact_me",
     name: "Contact",
     iconName: "mail",
   },

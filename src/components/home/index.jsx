@@ -3,13 +3,14 @@ import "./home.scss";
 import profileImg from "../../assets/images/pranay-home.webp";
 import Icon from "../icon";
 import Image from "next/image";
+import Link from "next/link";
 const Home = () => {
   return (
     <section className="home section" id="home">
       <div className="container grid">
         <div className="content grid">
           <div className="social">
-            <a
+            <Link
               aria-label="Navigate to linkedin account"
               href="https://linkedin.com/in/pranay-boreddy/"
               target="_blank"
@@ -17,8 +18,8 @@ const Home = () => {
               className="icon"
             >
               <Icon icon="linkedin" size="24px" />
-            </a>
-            <a
+            </Link>
+            <Link
               aria-label="navigate to Twitter account"
               href="https://twitter.com/pranayboreddy"
               target="_blank"
@@ -26,8 +27,8 @@ const Home = () => {
               className="icon"
             >
               <Icon icon="twitter" size="24px" />
-            </a>
-            <a
+            </Link>
+            <Link
               aria-label="Navigate to GitHub account"
               href="https://github.com/pranay-webdev"
               target="_blank"
@@ -35,7 +36,7 @@ const Home = () => {
               className="icon"
             >
               <Icon icon="github" size="24px" />
-            </a>
+            </Link>
           </div>
           <div className="image">
             <Image src={profileImg} alt="Profile" />

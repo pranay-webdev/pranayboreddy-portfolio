@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Icon from "../icon";
 import "./contact-me.scss";
 
@@ -17,18 +18,21 @@ const ContactMe = () => {
               <Icon icon="phone" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Call me</h3>
-                <a href="tel:+919966229322" className="subtitle">
+                <Link href="tel:+919966229322" className="subtitle">
                   +91-9966229322
-                </a>
+                </Link>
               </div>
             </div>
             <div className="contactInfo">
               <Icon icon="mail" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Email</h3>
-                <a href="mailto:pranayboreddy@gmail.com" className="subtitle">
+                <Link
+                  href="mailto:pranayboreddy@gmail.com"
+                  className="subtitle"
+                >
                   pranayboreddy.dev@gmail.com
-                </a>
+                </Link>
               </div>
             </div>
             <div className="contactInfo">

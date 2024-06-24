@@ -3,6 +3,7 @@ import { scrollToView, scrollToTop } from "../../shared/utils";
 import "./navbar.scss";
 import Icon from "../icon";
 import { NAV_ITEMS } from "@/shared/constants";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -70,9 +71,9 @@ const Navbar = () => {
       id="header"
     >
       <nav className="nav container">
-        <a href="./" className="logo">
+        <Link href="./" className="logo">
           Pranay
-        </a>
+        </Link>
         <div className={`menu ${showMenu ? "showMenu" : ""}`}>
           <ul className="list grid">
             {NAV_ITEMS.map((item) => (
