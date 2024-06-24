@@ -44,11 +44,13 @@
           width: 100%;
           background-color: getColor(input-color);
           color: getColor(text-color);
-          font-family: $body-font;
+          font-family: inherit;
           font-size: $normal-font-size;
           border: none;
           outline: none;
           padding: 0.25rem 0.5rem 0.5rem 0;
+          box-shadow: 0 0 0px 1000px getColor(input-color) inset;
+          -webkit-text-fill-color: getColor(text-color);
         }
       }
     }

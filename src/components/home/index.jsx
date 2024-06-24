@@ -16,7 +16,7 @@ const Home = () => {
               rel="noreferrer"
               className="icon"
             >
-              <Icon icon="linkedin" size="24px"/>
+              <Icon icon="linkedin" size="24px" />
             </a>
             <a
               aria-label="navigate to Twitter account"
@@ -25,16 +25,16 @@ const Home = () => {
               rel="noreferrer"
               className="icon"
             >
-              <Icon icon="twitter" size="24px"/>
+              <Icon icon="twitter" size="24px" />
             </a>
             <a
               aria-label="Navigate to GitHub account"
-              href="https://github.com/pranayboreddy"
+              href="https://github.com/pranay-webdev"
               target="_blank"
               rel="noreferrer"
               className="icon"
             >
-              <Icon icon="github" size="24px"/>
+              <Icon icon="github" size="24px" />
             </a>
           </div>
           <div className="image">
@@ -51,7 +51,7 @@ const Home = () => {
               onClick={() => scrollToView("contact_me")}
               className="common-button button-flex"
             >
-              Contact Me <Icon icon="send" size="24px" className="icon" />
+              Contact Me <Icon icon="enter" size="24px" className="icon" />
             </button>
           </div>
         </div>
@@ -60,9 +60,9 @@ const Home = () => {
             onClick={() => scrollToView("about")}
             className="button button-flex"
           >
-            <Icon icon="mouse" size="2rem"/>
+            <Icon icon="mouse" size="2rem" />
             <span>Scroll Down</span>
-            <Icon icon="arrow_mark" size="2.5rem" />
+            <Icon icon="arrow-up" size="2.5rem" />
           </button>
         </div>
       </div>

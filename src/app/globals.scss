@@ -1,6 +1,3 @@
-@import "../styles/colors";
-@import "../styles/fonts";
-@import "../styles/typography";
 @import "../styles/common";
 
 :root {
@@ -29,7 +26,6 @@ html {
 
 body {
   margin: 0;
-  font-family: "poppins", sans-serif;
   font-size: $normal-font-size;
   background-color: getColor(body-color);
   color: getColor(text-color);
