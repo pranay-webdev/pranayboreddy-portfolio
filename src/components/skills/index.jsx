@@ -27,7 +27,7 @@ const Skills = () => {
                   <h1 className="title">{data.title}</h1>
                   <span className="subtitle">{data.subtitle}</span>
                 </div>
-                <Icon size="24px" icon="arrow_mark" className="arrow" />
+                <Icon size="24px" icon="chevron" className="arrow" />
               </div>
               <div className="list grid">
                 {data.skills.map((skill) => {

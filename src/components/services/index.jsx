@@ -30,7 +30,7 @@ const Services = () => {
             className="common-button button-flex button-small button-link servicesButton"
             onClick={() => toggleModal("fontend dev")}
           >
-            View More <Icon icon="arrow_up" className="icon" />
+            View More <Icon icon="arrow-right" className="icon" />
           </span>
         </div>
         <div className="content">
@@ -44,7 +44,7 @@ const Services = () => {
             className="common-button button-flex button-small button-link servicesButton"
             onClick={() => toggleModal("educator")}
           >
-            View More <Icon icon="arrow_up" className="icon" />
+            View More <Icon icon="arrow-right" className="icon" />
           </span>
         </div>
       </div>

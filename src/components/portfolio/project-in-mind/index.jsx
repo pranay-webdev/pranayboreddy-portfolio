@@ -13,7 +13,7 @@ const ProjectInMind = () => {
             onClick={() => scrollToView("contact_me")}
             className="common-button button-flex button-white"
           >
-            Contact Me <Icon icon="send" className="icon" />
+            Contact Me <Icon icon="enter" className="icon" />
           </button>
         </div>
       </div>

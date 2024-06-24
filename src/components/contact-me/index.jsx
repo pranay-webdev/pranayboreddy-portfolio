@@ -1,4 +1,3 @@
-
 import Icon from "../icon";
 import "./contact-me.scss";
 
@@ -24,11 +23,11 @@ const ContactMe = () => {
               </div>
             </div>
             <div className="contactInfo">
-              <Icon icon="email" className="icon" size="2rem" />
+              <Icon icon="mail" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Email</h3>
                 <a href="mailto:pranayboreddy@gmail.com" className="subtitle">
-                  pranayboreddy@gmail.com
+                  pranayboreddy.dev@gmail.com
                 </a>
               </div>
             </div>
@@ -71,7 +70,7 @@ const ContactMe = () => {
             </div>
             <div>
               <button type="submit" className="common-button button-flex">
-                Send Message <Icon icon="send" className="icon" />
+                Send Message <Icon icon="enter" className="icon" />
               </button>
             </div>
           </form>
@@ -79,7 +78,7 @@ const ContactMe = () => {
       </section>
       <section className="section copyright">
         <div className="copyrightSection container">
-          <p className="name">&copy;2022 Pranay</p>
+          <p className="name">&copy;2024 Pranay</p>
           <span className="keyword">ALL RIGHTS RESERVED</span>
         </div>
       </section>
