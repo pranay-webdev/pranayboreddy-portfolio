@@ -14,7 +14,7 @@ const ContactMe = () => {
   return (
     <>
       <section className="section contact" id="contact_me">
-        <h2 className="title">Contact Me</h2>
+        <h2 className="title">Contact Mse</h2>
         <span className="subtitle">Get in touch</span>
         <div className="contactContainer container grid">
           <div>
