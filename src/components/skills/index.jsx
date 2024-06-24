@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { UilBracketsCurly, UilAngleDown } from "@iconscout/react-unicons";
 import { MY_SKILLS } from "../../shared/constants";
 import "./skills.scss";
+import Icon from "../icon";
 
 const Skills = () => {
   const [skillOpenedIndex, setSkillOpenedIndex] = useState(0);
@@ -22,12 +22,12 @@ const Skills = () => {
               key={data.title}
             >
               <div className="skillsHeader">
-                <UilBracketsCurly className="icon" />
+                <Icon size="24px" icon="braces" className="icon" />
                 <div>
                   <h1 className="title">{data.title}</h1>
                   <span className="subtitle">{data.subtitle}</span>
                 </div>
-                <UilAngleDown className="arrow" />
+                <Icon size="24px" icon="arrow_mark" className="arrow" />
               </div>
               <div className="list grid">
                 {data.skills.map((skill) => {
