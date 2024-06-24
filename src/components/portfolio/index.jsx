@@ -1,8 +1,8 @@
-import { UilArrowRight } from "@iconscout/react-unicons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "./portfolio.scss";
 import ProjectInMind from "./project-in-mind";
+import Icon from "../icon";
 
 const Portfolio = () => {
   return (
@@ -37,7 +37,7 @@ const Portfolio = () => {
                     className="common-button button-flex button-small portfolioButton button-icon"
                   >
                     Demo
-                    <UilArrowRight className="icon" />
+                    <Icon icon="arrow_up" className="icon" />
                   </a>
                 </div>
               </div>
@@ -54,7 +54,7 @@ const Portfolio = () => {
                   </p>
                   <button className="common-button button-flex button-small portfolioButton button-icon">
                     Demo
-                    <UilArrowRight className="icon" />
+                    <Icon icon="arrow_up" className="icon" />
                   </button>
                 </div>
               </div>

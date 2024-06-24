@@ -1,19 +1,8 @@
-import {
-  UilEstate,
-  UilUser,
-  UilFileAlt,
-  UilBriefcaseAlt,
-  UilScenery,
-  UilMessage,
-  UilTimes,
-  UilApps,
-  UilArrowUp,
-  UilMoon,
-  UilSun,
-} from "@iconscout/react-unicons";
 import { useState, useEffect, useRef } from "react";
-import "./navbar.scss";
 import { scrollToView, scrollToTop } from "../../shared/utils";
+import "./navbar.scss";
+import Icon from "../icon";
+
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -91,7 +80,7 @@ const Navbar = () => {
               onClick={() => setShowMenu(false)}
             >
               <button onClick={() => scrollToView("home")} className="link">
-                <UilEstate size="26" className="icon" />
+                <Icon icon="home" size="26" className="icon" />
                 Home
               </button>
             </li>
@@ -100,7 +89,7 @@ const Navbar = () => {
               onClick={() => setShowMenu(false)}
             >
               <button onClick={() => scrollToView("about")} className="link">
-                <UilUser size="26" className="icon" />
+                <Icon icon="user" size="26" className="icon" />
                 About
               </button>
             </li>
@@ -111,7 +100,7 @@ const Navbar = () => {
               onClick={() => setShowMenu(false)}
             >
               <button onClick={() => scrollToView("skills")} className="link">
-                <UilFileAlt size="26" className="icon" />
+                <Icon icon="file" size="26" className="icon" />
                 Skills
               </button>
             </li>
@@ -122,7 +111,7 @@ const Navbar = () => {
               onClick={() => setShowMenu(false)}
             >
               <button onClick={() => scrollToView("services")} className="link">
-                <UilBriefcaseAlt size="26" className="icon" />
+                <Icon icon="brief" size="26" className="icon" />
                 Services
               </button>
             </li>
@@ -136,7 +125,7 @@ const Navbar = () => {
                 onClick={() => scrollToView("portfolio")}
                 className="link"
               >
-                <UilScenery size="26" className="icon" />
+                <Icon icon="image" size="26" className="icon" />
                 Portfolio
               </button>
             </li>
@@ -150,22 +139,22 @@ const Navbar = () => {
                 onClick={() => scrollToView("contact_me")}
                 className="link"
               >
-                <UilMessage size="26" className="icon" />
+                <Icon icon="send" size="26" className="icon" />
                 Contact me
               </button>
             </li>
           </ul>
-          <UilTimes className="close" onClick={() => setShowMenu(false)} />
+          <Icon icon="cross" size="24px" className="close" onClick={() => setShowMenu(false)} />
         </div>
         <div className="btnGroup">
           <div
             className="changeTheme"
             onClick={() => setDarkModeState(!darkModeState)}
           >
-            {darkModeState ? <UilSun /> : <UilMoon />}
+            {darkModeState ? <Icon icon="sun" size="24px" /> : <Icon icon="moon" size="24px" />}
           </div>
           <div className="toggleBtn" onClick={() => setShowMenu(true)}>
-            <UilApps className="appIcon" />
+            <Icon icon="menu" size="24px" className="appIcon" />
           </div>
         </div>
       </nav>
@@ -175,7 +164,7 @@ const Navbar = () => {
         id="scroll-up"
         aria-label="Scroll to the top of the page"
       >
-        <UilArrowUp size="1.6rem" className="icon" />
+        <Icon icon="arrow_up" size="1.6rem" className="icon" />
       </button>
     </header>
   );

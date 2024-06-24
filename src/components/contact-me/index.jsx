@@ -1,9 +1,5 @@
-import {
-  UilPhone,
-  UilEnvelope,
-  UilMapMarker,
-  UilMessage,
-} from "@iconscout/react-unicons";
+
+import Icon from "../icon";
 import "./contact-me.scss";
 
 const ContactMe = () => {
@@ -19,7 +15,7 @@ const ContactMe = () => {
         <div className="contactContainer container grid">
           <div>
             <div className="contactInfo">
-              <UilPhone className="icon" size="2rem" />
+              <Icon icon="phone" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Call me</h3>
                 <a href="tel:+919966229322" className="subtitle">
@@ -28,7 +24,7 @@ const ContactMe = () => {
               </div>
             </div>
             <div className="contactInfo">
-              <UilEnvelope className="icon" size="2rem" />
+              <Icon icon="email" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Email</h3>
                 <a href="mailto:pranayboreddy@gmail.com" className="subtitle">
@@ -37,7 +33,7 @@ const ContactMe = () => {
               </div>
             </div>
             <div className="contactInfo">
-              <UilMapMarker className="icon" size="2rem" />
+              <Icon icon="location" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Location</h3>
                 <span className="subtitle">
@@ -75,7 +71,7 @@ const ContactMe = () => {
             </div>
             <div>
               <button type="submit" className="common-button button-flex">
-                Send Message <UilMessage className="icon" />
+                Send Message <Icon icon="send" className="icon" />
               </button>
             </div>
           </form>
