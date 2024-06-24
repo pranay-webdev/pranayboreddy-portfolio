@@ -1,15 +1,8 @@
-import {
-  UilLinkedinAlt,
-  UilTwitterAlt,
-  UilGithubAlt,
-  UilMessage,
-  UilMouseAlt,
-  UilArrowDown,
-} from "@iconscout/react-unicons";
 import { scrollToView } from "../../shared/utils";
 import "./home.scss";
 import profileImg from "../../assets/images/pranay-home.webp";
-
+import Icon from "../icon";
+import Image from "next/image";
 const Home = () => {
   return (
     <section className="home section" id="home">
@@ -23,7 +16,7 @@ const Home = () => {
               rel="noreferrer"
               className="icon"
             >
-              <UilLinkedinAlt />
+              <Icon icon="linkedin" size="24px"/>
             </a>
             <a
               aria-label="navigate to Twitter account"
@@ -32,7 +25,7 @@ const Home = () => {
               rel="noreferrer"
               className="icon"
             >
-              <UilTwitterAlt />
+              <Icon icon="twitter" size="24px"/>
             </a>
             <a
               aria-label="Navigate to GitHub account"
@@ -41,11 +34,11 @@ const Home = () => {
               rel="noreferrer"
               className="icon"
             >
-              <UilGithubAlt />
+              <Icon icon="github" size="24px"/>
             </a>
           </div>
           <div className="image">
-            <img src={profileImg} alt="Profile" />
+            <Image src={profileImg} alt="Profile" />
           </div>
           <div className="data">
             <h1 className="title">Hi, I am Pranay</h1>
@@ -58,7 +51,7 @@ const Home = () => {
               onClick={() => scrollToView("contact_me")}
               className="common-button button-flex"
             >
-              Contact Me <UilMessage className="icon" />
+              Contact Me <Icon icon="send" size="24px" className="icon" />
             </button>
           </div>
         </div>
@@ -67,9 +60,9 @@ const Home = () => {
             onClick={() => scrollToView("about")}
             className="button button-flex"
           >
-            <UilMouseAlt size="2rem" />
+            <Icon icon="mouse" size="2rem"/>
             <span>Scroll Down</span>
-            <UilArrowDown size="1.25rem" />
+            <Icon icon="arrow_mark" size="2.5rem" />
           </button>
         </div>
       </div>
