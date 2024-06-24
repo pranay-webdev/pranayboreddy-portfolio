@@ -1,6 +1,6 @@
 import React from "react";
 import IcoMoon from "react-icomoon";
-import iconSet from "../../assets/icon-fonts/selection.json";
+import iconSet from "@/assets/font-icons/selection.json";
 
 const Icon = ({ icon, ...props }) => (
   <IcoMoon

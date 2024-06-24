@@ -37,7 +37,7 @@ const Portfolio = () => {
                     className="common-button button-flex button-small portfolioButton button-icon"
                   >
                     Demo
-                    <Icon icon="arrow_up" className="icon" />
+                    <Icon icon="arrow-up" className="icon" />
                   </a>
                 </div>
               </div>
@@ -54,7 +54,7 @@ const Portfolio = () => {
                   </p>
                   <button className="common-button button-flex button-small portfolioButton button-icon">
                     Demo
-                    <Icon icon="arrow_up" className="icon" />
+                    <Icon icon="arrow-up" className="icon" />
                   </button>
                 </div>
               </div>

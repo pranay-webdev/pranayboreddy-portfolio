@@ -57,3 +57,36 @@ export const MY_SKILLS = [
     ],
   },
 ];
+
+export const NAV_ITEMS = [
+  {
+    id: "home",
+    name: "Home",
+    iconName: "home",
+  },
+  {
+    id: "about",
+    name: "About",
+    iconName: "user",
+  },
+  {
+    id: "skills",
+    name: "Skills",
+    iconName: "file",
+  },
+  {
+    id: "services",
+    name: "Services",
+    iconName: "brief",
+  },
+  {
+    id: "portfolio",
+    name: "Portfolio",
+    iconName: "image",
+  },
+  {
+    id: "contact",
+    name: "Contact",
+    iconName: "mail",
+  },
+];

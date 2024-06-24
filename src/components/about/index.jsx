@@ -42,11 +42,12 @@ const About = () => {
           </div>
           <div className="buttonsContainer">
             <Link
-              download="pranay-frontend-resume"
               href={resume}
+              target="_blank"
               className="common-button button-flex"
             >
-              Download Resume <Icon size="24px" icon="download" className="icon" />
+              View Resume
+              <Icon size="24px" icon="arrow-up-right" className="icon" />
             </Link>
           </div>
         </div>
