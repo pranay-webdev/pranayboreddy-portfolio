@@ -1,6 +1,6 @@
-import { UilMessage } from "@iconscout/react-unicons";
 import "./project-in-mind.scss";
 import { scrollToView } from "../../../shared/utils";
+import { Icon } from "@/components";
 
 const ProjectInMind = () => {
   return (
@@ -13,7 +13,7 @@ const ProjectInMind = () => {
             onClick={() => scrollToView("contact_me")}
             className="common-button button-flex button-white"
           >
-            Contact Me <UilMessage className="icon" />
+            Contact Me <Icon icon="enter" className="icon" />
           </button>
         </div>
       </div>

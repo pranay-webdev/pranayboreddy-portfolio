@@ -1,51 +1,45 @@
-import {
-  UilLinkedinAlt,
-  UilTwitterAlt,
-  UilGithubAlt,
-  UilMessage,
-  UilMouseAlt,
-  UilArrowDown,
-} from "@iconscout/react-unicons";
 import { scrollToView } from "../../shared/utils";
 import "./home.scss";
 import profileImg from "../../assets/images/pranay-home.webp";
-
+import Icon from "../icon";
+import Image from "next/image";
+import Link from "next/link";
 const Home = () => {
   return (
     <section className="home section" id="home">
       <div className="container grid">
         <div className="content grid">
           <div className="social">
-            <a
+            <Link
               aria-label="Navigate to linkedin account"
               href="https://linkedin.com/in/pranay-boreddy/"
               target="_blank"
               rel="noreferrer"
               className="icon"
             >
-              <UilLinkedinAlt />
-            </a>
-            <a
+              <Icon icon="linkedin" size="24px" />
+            </Link>
+            <Link
               aria-label="navigate to Twitter account"
               href="https://twitter.com/pranayboreddy"
               target="_blank"
               rel="noreferrer"
               className="icon"
             >
-              <UilTwitterAlt />
-            </a>
-            <a
+              <Icon icon="twitter" size="24px" />
+            </Link>
+            <Link
               aria-label="Navigate to GitHub account"
-              href="https://github.com/pranayboreddy"
+              href="https://github.com/pranay-webdev"
               target="_blank"
               rel="noreferrer"
               className="icon"
             >
-              <UilGithubAlt />
-            </a>
+              <Icon icon="github" size="24px" />
+            </Link>
           </div>
           <div className="image">
-            <img src={profileImg} alt="Profile" />
+            <Image src={profileImg} alt="Profile" />
           </div>
           <div className="data">
             <h1 className="title">Hi, I am Pranay</h1>
@@ -58,7 +52,7 @@ const Home = () => {
               onClick={() => scrollToView("contact_me")}
               className="common-button button-flex"
             >
-              Contact Me <UilMessage className="icon" />
+              Contact Me <Icon icon="enter" size="24px" className="icon" />
             </button>
           </div>
         </div>
@@ -67,9 +61,9 @@ const Home = () => {
             onClick={() => scrollToView("about")}
             className="button button-flex"
           >
-            <UilMouseAlt size="2rem" />
+            <Icon icon="mouse" size="2rem" />
             <span>Scroll Down</span>
-            <UilArrowDown size="1.25rem" />
+            <Icon icon="arrow-up" size="2.5rem" />
           </button>
         </div>
       </div>

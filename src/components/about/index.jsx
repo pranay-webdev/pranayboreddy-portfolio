@@ -1,6 +1,8 @@
-import { UilDownloadAlt } from "@iconscout/react-unicons";
+import Image from "next/image";
 import resume from "../../assets/pdfs/pranay-resume.pdf";
+import Icon from "../icon";
 import "./about.scss";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -8,7 +10,7 @@ const About = () => {
       <h2 className="title">About me</h2>
       <span className="subtitle">My Introduction</span>
       <div className="aboutContainer container grid">
-        <img
+        <Image
           className="image"
           src={require("../../assets/images/pranay-about.webp")}
           alt="about"
@@ -39,13 +41,14 @@ const About = () => {
             </div>
           </div>
           <div className="buttonsContainer">
-            <a
-              download="pranay-frontend-resume"
+            <Link
               href={resume}
+              target="_blank"
               className="common-button button-flex"
             >
-              Download Resume <UilDownloadAlt className="icon" />
-            </a>
+              View Resume
+              <Icon size="24px" icon="arrow-up-right" className="icon" />
+            </Link>
           </div>
         </div>
       </div>

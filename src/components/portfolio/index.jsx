@@ -1,8 +1,9 @@
-import { UilArrowRight } from "@iconscout/react-unicons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import "./portfolio.scss";
 import ProjectInMind from "./project-in-mind";
+import Icon from "../icon";
+import Link from "next/link";
 
 const Portfolio = () => {
   return (
@@ -30,15 +31,15 @@ const Portfolio = () => {
                     components and animated interactions including form
                     validations
                   </p>
-                  <a
+                  <Link
                     href="https://trans-port.netlify.app"
                     target="_blank"
                     rel="noreferrer"
                     className="common-button button-flex button-small portfolioButton button-icon"
                   >
                     Demo
-                    <UilArrowRight className="icon" />
-                  </a>
+                    <Icon icon="arrow-up" className="icon" />
+                  </Link>
                 </div>
               </div>
             </SwiperSlide>
@@ -54,7 +55,7 @@ const Portfolio = () => {
                   </p>
                   <button className="common-button button-flex button-small portfolioButton button-icon">
                     Demo
-                    <UilArrowRight className="icon" />
+                    <Icon icon="arrow-up" className="icon" />
                   </button>
                 </div>
               </div>

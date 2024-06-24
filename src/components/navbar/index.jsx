@@ -1,19 +1,9 @@
-import {
-  UilEstate,
-  UilUser,
-  UilFileAlt,
-  UilBriefcaseAlt,
-  UilScenery,
-  UilMessage,
-  UilTimes,
-  UilApps,
-  UilArrowUp,
-  UilMoon,
-  UilSun,
-} from "@iconscout/react-unicons";
 import { useState, useEffect, useRef } from "react";
-import "./navbar.scss";
 import { scrollToView, scrollToTop } from "../../shared/utils";
+import "./navbar.scss";
+import Icon from "../icon";
+import { NAV_ITEMS } from "@/shared/constants";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,7 +15,7 @@ const Navbar = () => {
   const colorSchemeRef = useRef(null);
 
   const setActiveLink = (refs) => {
-    const scrollY = window.pageYOffset;
+    const scrollY = window.scrollY;
     refs.forEach((current) => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 40;
@@ -81,91 +71,46 @@ const Navbar = () => {
       id="header"
     >
       <nav className="nav container">
-        <a href="./" className="logo">
+        <Link href="./" className="logo">
           Pranay
-        </a>
+        </Link>
         <div className={`menu ${showMenu ? "showMenu" : ""}`}>
           <ul className="list grid">
-            <li
-              className={`item ${hightLightId === "home" ? "activeLink" : ""}`}
-              onClick={() => setShowMenu(false)}
-            >
-              <button onClick={() => scrollToView("home")} className="link">
-                <UilEstate size="26" className="icon" />
-                Home
-              </button>
-            </li>
-            <li
-              className={`item ${hightLightId === "about" ? "activeLink" : ""}`}
-              onClick={() => setShowMenu(false)}
-            >
-              <button onClick={() => scrollToView("about")} className="link">
-                <UilUser size="26" className="icon" />
-                About
-              </button>
-            </li>
-            <li
-              className={`item ${
-                hightLightId === "skills" ? "activeLink" : ""
-              }`}
-              onClick={() => setShowMenu(false)}
-            >
-              <button onClick={() => scrollToView("skills")} className="link">
-                <UilFileAlt size="26" className="icon" />
-                Skills
-              </button>
-            </li>
-            <li
-              className={`item ${
-                hightLightId === "services" ? "activeLink" : ""
-              }`}
-              onClick={() => setShowMenu(false)}
-            >
-              <button onClick={() => scrollToView("services")} className="link">
-                <UilBriefcaseAlt size="26" className="icon" />
-                Services
-              </button>
-            </li>
-            <li
-              className={`item ${
-                hightLightId === "portfolio" ? "activeLink" : ""
-              }`}
-              onClick={() => setShowMenu(false)}
-            >
-              <button
-                onClick={() => scrollToView("portfolio")}
-                className="link"
+            {NAV_ITEMS.map((item) => (
+              <li
+                key={item.id}
+                className={`item ${
+                  hightLightId === item.id ? "activeLink" : ""
+                }`}
+                onClick={() => setShowMenu(false)}
               >
-                <UilScenery size="26" className="icon" />
-                Portfolio
-              </button>
-            </li>
-            <li
-              className={`item ${
-                hightLightId === "contact_me" && "activeLink"
-              }`}
-              onClick={() => setShowMenu(false)}
-            >
-              <button
-                onClick={() => scrollToView("contact_me")}
-                className="link"
-              >
-                <UilMessage size="26" className="icon" />
-                Contact me
-              </button>
-            </li>
+                <button onClick={() => scrollToView(item.id)} className="link">
+                  <Icon icon={item.iconName} size="26px" className="icon" />
+                  {item.name}
+                </button>
+              </li>
+            ))}
           </ul>
-          <UilTimes className="close" onClick={() => setShowMenu(false)} />
+          <Icon
+            icon="cross"
+            size="24px"
+            className="close"
+            onClick={() => setShowMenu(false)}
+          />
         </div>
         <div className="btnGroup">
           <div
             className="changeTheme"
             onClick={() => setDarkModeState(!darkModeState)}
           >
-            {darkModeState ? <UilSun /> : <UilMoon />}
+            {darkModeState ? (
+              <Icon icon="sun" size="24px" />
+            ) : (
+              <Icon icon="moon" size="24px" />
+            )}
           </div>
           <div className="toggleBtn" onClick={() => setShowMenu(true)}>
-            <UilApps className="appIcon" />
+            <Icon icon="app" size="24px" className="appIcon" />
           </div>
         </div>
       </nav>
@@ -175,7 +120,7 @@ const Navbar = () => {
         id="scroll-up"
         aria-label="Scroll to the top of the page"
       >
-        <UilArrowUp size="1.6rem" className="icon" />
+        <Icon icon="arrow-up" size="1.6rem" className="icon" />
       </button>
     </header>
   );

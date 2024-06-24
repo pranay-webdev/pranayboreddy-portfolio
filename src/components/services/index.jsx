@@ -1,11 +1,7 @@
 import { useState } from "react";
-import {
-  UilBookReader,
-  UilArrowRight,
-  UilArrow,
-} from "@iconscout/react-unicons";
 import "./services.scss";
 import ServicesModal from "./modal/index";
+import Icon from "../icon";
 
 const Services = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -25,7 +21,7 @@ const Services = () => {
       <div className="servicesContainer grid container">
         <div className="content">
           <div>
-            <UilArrow className="serviceIcon" />
+            <Icon icon="code" className="serviceIcon" />
             <h3 className="title">
               UI <br /> Developer
             </h3>
@@ -34,12 +30,12 @@ const Services = () => {
             className="common-button button-flex button-small button-link servicesButton"
             onClick={() => toggleModal("fontend dev")}
           >
-            View More <UilArrowRight className="icon" />
+            View More <Icon icon="arrow-right" className="icon" />
           </span>
         </div>
         <div className="content">
           <div>
-            <UilBookReader className="serviceIcon" />
+            <Icon icon="reading" className="serviceIcon" />
             <h3 className="title">
               Educator <br /> Mentor
             </h3>
@@ -48,7 +44,7 @@ const Services = () => {
             className="common-button button-flex button-small button-link servicesButton"
             onClick={() => toggleModal("educator")}
           >
-            View More <UilArrowRight className="icon" />
+            View More <Icon icon="arrow-right" className="icon" />
           </span>
         </div>
       </div>

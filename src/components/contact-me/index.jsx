@@ -1,9 +1,5 @@
-import {
-  UilPhone,
-  UilEnvelope,
-  UilMapMarker,
-  UilMessage,
-} from "@iconscout/react-unicons";
+import Link from "next/link";
+import Icon from "../icon";
 import "./contact-me.scss";
 
 const ContactMe = () => {
@@ -19,25 +15,28 @@ const ContactMe = () => {
         <div className="contactContainer container grid">
           <div>
             <div className="contactInfo">
-              <UilPhone className="icon" size="2rem" />
+              <Icon icon="phone" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Call me</h3>
-                <a href="tel:+919966229322" className="subtitle">
+                <Link href="tel:+919966229322" className="subtitle">
                   +91-9966229322
-                </a>
+                </Link>
               </div>
             </div>
             <div className="contactInfo">
-              <UilEnvelope className="icon" size="2rem" />
+              <Icon icon="mail" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Email</h3>
-                <a href="mailto:pranayboreddy@gmail.com" className="subtitle">
-                  pranayboreddy@gmail.com
-                </a>
+                <Link
+                  href="mailto:pranayboreddy@gmail.com"
+                  className="subtitle"
+                >
+                  pranayboreddy.dev@gmail.com
+                </Link>
               </div>
             </div>
             <div className="contactInfo">
-              <UilMapMarker className="icon" size="2rem" />
+              <Icon icon="location" className="icon" size="2rem" />
               <div>
                 <h3 className="title">Location</h3>
                 <span className="subtitle">
@@ -75,7 +74,7 @@ const ContactMe = () => {
             </div>
             <div>
               <button type="submit" className="common-button button-flex">
-                Send Message <UilMessage className="icon" />
+                Send Message <Icon icon="enter" className="icon" />
               </button>
             </div>
           </form>
@@ -83,7 +82,7 @@ const ContactMe = () => {
       </section>
       <section className="section copyright">
         <div className="copyrightSection container">
-          <p className="name">&copy;2022 Pranay</p>
+          <p className="name">&copy;2024 Pranay</p>
           <span className="keyword">ALL RIGHTS RESERVED</span>
         </div>
       </section>
