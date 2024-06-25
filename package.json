@@ -13,16 +13,17 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icomoon": "^2.5.7",
+    "sharp": "^0.33.4",
     "swiper": "^8.3.0"
   },
   "devDependencies": {
-    "sass": "^1.77.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "file-loader": "^6.2.0",
+    "sass": "^1.77.6",
     "typescript": "^5"
   }
 }
